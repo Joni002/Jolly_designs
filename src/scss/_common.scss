@@ -9,6 +9,8 @@ $colorDarkGreen: #648300;
 $colorRed: #b01e1e;
 $colorLightRed: #ce7f7f;
 $colorDarkRed: #881616;
+$darkGrey: #414249;
+$pink: #FF8F8F;
 
 html,
 body {
@@ -16,9 +18,9 @@ body {
 }
 
 body {
-	color: $colorBlack;
+	color: $darkGrey;
 	font-size: 14px;
-	font-family: Roboto, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	line-height: 1.25;
 }
 
@@ -83,4 +85,16 @@ button {
 	min-width: 320px;
 	min-height: 100%;
 	overflow: hidden;
+}
+
+.color-gray{
+	color: $darkGrey
+}
+
+.color-pink{
+	color: $pink
+}
+
+.weight-600{
+	font-weight: 600;
 }
