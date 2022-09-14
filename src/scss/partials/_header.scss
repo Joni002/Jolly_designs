@@ -25,6 +25,9 @@
             align-items: center;
             gap: 6px;
         }
+        .phone_number:hover{
+            color: #E86E6E;
+        }
 
         .language{
             text-transform: uppercase;
@@ -39,8 +42,12 @@
         display: flex;
         gap: 40px;
 
+        .icon_hover:hover{
+            filter: invert(80%) sepia(72%) saturate(2267%) hue-rotate(304deg) brightness(101%) contrast(116%);
+        }
         .like{
             display: flex;
+            align-items: center;
             gap: 6px;
 
             .counter{
@@ -70,6 +77,9 @@
     .nav_item{
         position: relative;
         text-transform: uppercase;
+    }
+    .nav_item:hover{
+        color: $pink;
     }
     .select:after{
         position: absolute;
