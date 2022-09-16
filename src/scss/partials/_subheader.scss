@@ -1,0 +1,36 @@
+.sudheader{
+    height: 40px;
+    line-height: 40px;
+    background-color: $yellow;
+    
+    .sudheader_slider{
+        white-space: nowrap;
+    }
+    .sudheader__item{
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 8px;
+    
+        .icon {
+            font-size: 32px;
+        }
+    }    
+}
+/* Слайдер */
+.slick-slider{
+    display: flex;
+}
+/* Обмежуюча оболонка */
+.sudheader_slider .slick-list {
+    overflow: hidden;
+}
+/* Стрічка слайдів */
+.sudheader_slider .slick-track{
+    display: flex;
+}
+/* Слайд */
+.sudheader_slider .slick-slide{
+    display: flex;
+    justify-content: center;
+}
