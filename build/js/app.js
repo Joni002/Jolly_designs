@@ -17,5 +17,9 @@ $(document).ready(function () {
       }
     }]
   });
+  $('.discover_slider').slick({
+    infinite: true,
+    dots: true
+  });
 });
 //# sourceMappingURL=app.js.map

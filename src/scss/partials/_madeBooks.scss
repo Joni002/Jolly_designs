@@ -1,0 +1,45 @@
+.made_books{
+
+    .content_container{
+        padding-bottom: 0;
+    }
+}
+.made_books_title{
+    font-size: 64px;
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: $darkPink;
+
+    text-align: center;
+}
+.made_books_content{
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+.made_books__steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.made_books__step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 295px;
+
+    .made_books__step_title{
+        font-size: 20px;
+        font-weight: 600;
+
+        padding-bottom: 8px;
+    }
+    .made_books__step_text{
+        width: 210px;
+        text-align: center;
+
+        padding-bottom: 32px;
+    }
+}

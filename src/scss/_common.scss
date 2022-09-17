@@ -11,7 +11,9 @@ $colorLightRed: #ce7f7f;
 $colorDarkRed: #881616;
 $darkGrey: #414249;
 $pink: #FF8F8F;
+$darkPink: #E86E6E;
 $yellow: #FFE4BB;
+$blue: #105393;
 
 html,
 body {
@@ -90,6 +92,18 @@ button {
 	overflow: hidden;
 }
 
+.container{
+    max-width: 1400px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+
+.content_container{
+	max-width: 1400px;
+    padding: 120px 80px;
+    margin: 0 auto;
+}
+
 .color-gray{
 	color: $darkGrey
 }
@@ -100,4 +114,32 @@ button {
 
 .weight-600{
 	font-weight: 600;
+}
+
+.pink_button{
+	padding: 16px 44px;
+
+	background-color: $pink;
+	border-radius: 38px;
+
+	color: $colorWhite;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+.pink_button:hover{
+	background-color: $darkPink;
+}
+
+.yellow_button{
+	padding: 16px 44px;
+
+	background-color: $yellow;
+	border-radius: 38px;
+
+	color: $darkPink;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+.yellow_button:hover{
+	background-color: #FFDCA7;
 }

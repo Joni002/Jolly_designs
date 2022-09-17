@@ -1,0 +1,45 @@
+.quiet_books{
+    background-color: #CEE8FF;
+    height: 1185px;
+    position: relative;
+
+    .quiet_books_line{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+.quiet_books_info{
+    display: flex;
+    justify-content: space-between;
+
+    .quiet_books_title{
+        width: 465px;
+        position: relative;
+
+        .stripes{
+            position: absolute;
+            transform: rotate(60deg);
+            top: -45px;
+            right: -55px;
+        }
+
+        h1{
+            font-size: 64px;
+            font-family: 'DM Serif Display', sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            color: $blue;
+        }
+    }
+    .quiet_books_text{
+        width: 625px;
+        padding-top: 10px;
+
+        h2{
+            font-size: 32px;
+            line-height: 48px;
+            color: $blue;
+        }
+    }
+}

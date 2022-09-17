@@ -21,5 +21,11 @@ $( document ).ready(
 				}
 				]
 		  });
+
+		$('.discover_slider').slick({
+			infinite: true,
+			dots: true,
+			
+		})
 	}
 );
