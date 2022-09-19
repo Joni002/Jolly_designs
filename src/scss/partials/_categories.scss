@@ -1,0 +1,34 @@
+.categories{
+    background-color: $blue;
+}
+
+.flex_title{
+    display: flex;
+    justify-content: center;
+}
+.categories_title{
+    position: relative;
+    padding-bottom: 80px;
+
+    .stripes{
+        position: absolute;
+        transform: rotate(60deg);
+        top: -45px;
+        right: -55px;
+    }
+}
+.categories_slider_item{
+    padding-right: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    h2{
+        color: $darcBlue;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+    }
+}

@@ -1,0 +1,59 @@
+.bestseller_slider{
+    margin-top: 48px;
+    position: relative;
+}
+.bestseller_slider_item_card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+
+    .bestseller_item_like{
+        appearance: none;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+        
+        background-color: $pink;
+        background-image: url(/img/svg/icons/icon-wish.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    p{
+        padding: 8px 0;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+    h3{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .pink_button_outline{
+        margin-top: 16px;
+        margin-bottom: 63px;
+    }
+}
+.bestseller_slider .slick-slide{
+    margin: 0 16px;
+}
+.bestseller_slider .slick-dots{
+    bottom: 0;
+}
+.bestseller_slider .slick-dots li.slick-active button{
+    opacity: 1;
+}
+/* Элемент точки */
+.bestseller_slider .slick-dots li button{
+    background: $pink;
+    opacity: 0.3;
+}

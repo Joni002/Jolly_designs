@@ -1,0 +1,57 @@
+.follow_us{
+    .content_container{
+        padding: 120px 0;
+    }
+}
+.folow_us_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    max-width: 1070px;
+
+    h2{
+        text-align: center;
+        color: $darkPink;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+
+        padding-bottom: 16px;
+    }
+}
+.folow_us_title{
+    position: relative;
+    padding-bottom: 16px;
+
+    .stripes{
+        position: absolute;
+        top: -55px;
+        left: -55px;
+    }
+}
+.follow_us_inst{
+    display: flex;
+    gap: 4px;
+    padding-bottom: 80px;
+
+    .icon{
+        font-size: 32px;
+        color: $pink;
+    }
+
+    h3{
+        color: $darcBlue;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+.follow_slider_item{
+    padding-right: 8px;
+}
+
+.follow_slider .slick-list {
+    overflow: hidden;
+}

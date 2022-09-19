@@ -1,5 +1,5 @@
 .quiet_books{
-    background-color: #CEE8FF;
+    background-color: $blue;
     height: 1185px;
     position: relative;
 
@@ -23,14 +23,6 @@
             top: -45px;
             right: -55px;
         }
-
-        h1{
-            font-size: 64px;
-            font-family: 'DM Serif Display', sans-serif;
-            font-size: 64px;
-            font-weight: 400;
-            color: $blue;
-        }
     }
     .quiet_books_text{
         width: 625px;
@@ -39,7 +31,7 @@
         h2{
             font-size: 32px;
             line-height: 48px;
-            color: $blue;
+            color: $darcBlue;
         }
     }
 }

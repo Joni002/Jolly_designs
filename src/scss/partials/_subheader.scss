@@ -1,11 +1,11 @@
 .sudheader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 40px;
     line-height: 40px;
     background-color: $yellow;
     
-    .sudheader_slider{
-        white-space: nowrap;
-    }
     .sudheader__item{
         display: flex;
         min-width: 0;
