@@ -76,15 +76,13 @@
     border: 0;
     z-index: 10;
 }
-.meets_slider .slick-arrow.slick-prev{
-    background: url(/img/svg/icons/icon-left-yellow.svg) no-repeat;
+.meets_slider .meets_prev{
     height: 40px;
     width: 25px;
     left: -10px;
 }
-.meets_slider .slick-arrow.slick-next{
+.meets_slider .meets_next{
     transform: rotate(180deg);
-    background: url(/img/svg/icons/icon-left-yellow.svg) no-repeat;
     height: 40px;
     width: 25px;
     right: -10px;

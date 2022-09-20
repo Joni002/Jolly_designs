@@ -1,14 +1,13 @@
 $( document ).ready(
 	function() {
-		const bg = $('.bestseller_item_like').css('backgroundImage')
 
 		// Sliders
 		$('.sudheader_slider').slick({
 			infinite: true,
 			slidesToShow: 3,
 			slidesToScroll: 3,
-			prevArrow: "<img src='img/svg/icons/icon-left.svg' class='prev' alt='1'>",
-    		nextArrow: "<img src='img/svg/icons/icon-right.svg' class='next' alt='2'>",
+			prevArrow: "<img src='img/svg/icons/icon-left.svg' class='sudheader_prev' alt='1'>",
+    		nextArrow: "<img src='img/svg/icons/icon-right.svg' class='sudheader_next' alt='2'>",
 			responsive:[
 				{
 					breakpoint: 1200,
@@ -28,6 +27,8 @@ $( document ).ready(
 		$('.discover_slider').slick({
 			infinite: true,
 			dots: true,
+			prevArrow: "<img src='img/svg/icons/icon-left-big.svg' class='discover_prev' alt='1'>",
+    		nextArrow: "<img src='img/svg/icons/icon-right-big.svg' class='discover_next' alt='2'>",
 		});
 
 		$('.bestseller_slider').slick({
@@ -42,11 +43,15 @@ $( document ).ready(
 		$('.favorite_slider').slick({
 			infinite: true,
 			slidesToShow: 1,
+			prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='favorite_prev' alt='1'>",
+    		nextArrow: "<img src='img/svg/icons/icon-right-blue.svg' class='favorite_next' alt='2'>",
 		});
 
 		$('.meets_slider').slick({
 			infinite: true,
 			waitForAnimate: false,
+			prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_prev' alt='1'>",
+    		nextArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_next' alt='2'>",
 		})
 		$('.meets_slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 			$('.meets_slider_tab').removeClass('active');
@@ -75,12 +80,12 @@ $( document ).ready(
 		})
 
 		// Like button
-		$('.bestseller_item_like').click(function() {
-			if(bg == $( this ).css('backgroundImage')){
-				$( this ).css('backgroundImage', 'url(/img/svg/icons/icon-wish_fill.svg)');
+		$('.like_icon').click(function() {
+			if($( this ).attr('src') == 'img/svg/icons/icon-wish.svg'){
+				$( this ).attr('src', 'img/svg/icons/icon-wish_fill.svg');
 			}
 			else{
-				$( this ).css('backgroundImage', 'url(/img/svg/icons/icon-wish.svg)');
+				$( this ).attr('src', 'img/svg/icons/icon-wish.svg');
 			}
 		});
 	}

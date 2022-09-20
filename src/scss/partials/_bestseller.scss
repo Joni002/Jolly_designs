@@ -12,6 +12,10 @@
     .bestseller_item_like{
         appearance: none;
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
         top: 16px;
         right: 16px;
 
@@ -23,9 +27,6 @@
         cursor: pointer;
         
         background-color: $pink;
-        background-image: url(/img/svg/icons/icon-wish.svg);
-        background-repeat: no-repeat;
-        background-position: center;
     }
     p{
         padding: 8px 0;

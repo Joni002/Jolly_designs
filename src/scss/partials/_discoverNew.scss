@@ -54,14 +54,12 @@
     border: 0;
     z-index: 10;
 }
-.discover_slider .slick-arrow.slick-prev{
-    background: url(/img/svg/icons/icon-left-big.svg) no-repeat;
+.discover_slider .discover_prev{
     height: 22px;
     width: 13px;
     left: 45px;
 }
-.discover_slider .slick-arrow.slick-next{
-    background: url(/img/svg/icons/icon-right-big.svg) no-repeat;
+.discover_slider .discover_next{
     height: 22px;
     width: 13px;
     right: 45px;
