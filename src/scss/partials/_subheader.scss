@@ -1,4 +1,5 @@
 .sudheader{
+    padding: 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +9,6 @@
     
     .sudheader__item{
         display: flex;
-        min-width: 0;
         align-items: center;
         gap: 8px;
     
