@@ -8,14 +8,20 @@
     text-align: center;
 }
 .made_books_content{
-    padding-top: 48px;
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
+
+    img{
+        padding-top: -5px;
+    }
 }
 .made_books__steps{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 28px;
+
 }
 .made_books__step{
     display: flex;
@@ -26,12 +32,16 @@
 
     .made_books__step_title{
         font-size: 20px;
+        line-height: 30px;
         font-weight: 600;
 
-        padding-bottom: 8px;
+        padding-top: 12px;
+        padding-bottom: 10px;
     }
     .made_books__step_text{
-        width: 210px;
+        width: 220px;
+        font-size: 16px;
+        line-height: 24px;
         text-align: center;
 
         padding-bottom: 32px;

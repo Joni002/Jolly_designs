@@ -60,9 +60,13 @@
     font-size: 16px;
 }
 
+.favorite_stars{
+    font-size: 20px;
+}
+
 .favorite_slider .slick-arrow{
     position: absolute;
-    top: calc(50% - 20px);
+    top: calc(50% - 35px);
     font-size: 0;
     border: 0;
     z-index: 10;
@@ -70,10 +74,10 @@
 .favorite_slider .favorite_prev{
     height: 40px;
     width: 25px;
-    left: 45px;
+    left: 75px;
 }
 .favorite_slider .favorite_next{
     height: 40px;
     width: 25px;
-    right: 45px;
+    right: 75px;
 }

@@ -2,14 +2,29 @@
     .content_container{
         padding: 120px 0;
     }
+
+    .big_title{
+        padding-bottom: 0;
+    }
 }
 .folow_us_info{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     margin: 0 auto;
     max-width: 1070px;
+
+    .group_stripes{
+        position: absolute;
+        right: -185px;
+        top: 110px;
+    }
+    .group_stars{
+        position: absolute;
+        left: -80px;
+    }
 
     h2{
         text-align: center;
@@ -18,6 +33,7 @@
         font-size: 32px;
         line-height: 48px;
 
+        padding-left: 16px;
         padding-bottom: 16px;
     }
 }
@@ -27,8 +43,9 @@
 
     .stripes{
         position: absolute;
-        top: -55px;
+        top: -40px;
         left: -55px;
+        transform: rotate(-15deg);
     }
 }
 .follow_us_inst{

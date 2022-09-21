@@ -138,6 +138,9 @@ button {
 	border-radius: 38px;
 
 	color: $colorWhite;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }
@@ -146,7 +149,7 @@ button {
 }
 
 .pink_button_outline{
-	padding: 16px 44px;
+	padding: 12px 33px;
 
 	background-color: $colorWhite;
 	border: 2px solid $pink;
@@ -154,6 +157,9 @@ button {
 	border-radius: 38px;
 
 	color: $pink;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }
@@ -170,6 +176,9 @@ button {
 	border-radius: 38px;
 
 	color: $darkPink;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }
@@ -180,9 +189,17 @@ button {
 .big_title{
 	font-family: 'DM Serif Display', sans-serif;
 	font-size: 64px;
+	line-height: 88px;
 	font-weight: 400;
 
 	padding-bottom: 24px;
+}
+
+.flex_title{
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 80px;
 }
 
 .slick-track{

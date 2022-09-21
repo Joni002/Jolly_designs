@@ -1,10 +1,15 @@
 .categories{
     background-color: $blue;
+
+    .big_title{
+        padding-bottom: 0;
+    }
 }
 
-.flex_title{
+.categories .flex_title{
     display: flex;
     justify-content: center;
+    padding-bottom: 0;
 }
 .categories_title{
     position: relative;
@@ -12,9 +17,9 @@
 
     .stripes{
         position: absolute;
-        transform: rotate(60deg);
-        top: -45px;
-        right: -55px;
+        transform: rotate(80deg);
+        top: -25px;
+        right: -60px;
     }
 }
 .categories_slider_item{
@@ -24,6 +29,11 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    img{
+        width: 296px;
+        height: 296px;
+    }
 
     h2{
         color: $darcBlue;

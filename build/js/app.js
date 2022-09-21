@@ -9,12 +9,14 @@ $(document).ready(function () {
     responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     }, {
       breakpoint: 750,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }]
   });
@@ -64,6 +66,16 @@ $(document).ready(function () {
     slidesToShow: 6,
     slidesToScroll: 6,
     arrows: false
+  });
+  $('.retailer_slider').slick({
+    dots: true,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 1,
+    rows: 2,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 4000
   }); // Like button
 
   $('.like_icon').click(function () {

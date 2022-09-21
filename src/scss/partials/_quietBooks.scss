@@ -19,8 +19,8 @@
         .stripes{
             position: absolute;
             transform: rotate(60deg);
-            top: -45px;
-            right: -55px;
+            top: -35px;
+            right: -60px;
         }
     }
     .quiet_books_text{
@@ -37,11 +37,13 @@
 
 .quiet_books_content{
     position: relative;
-    height: 800px;
+    height: 793px;
 
     .quiet_books_items{
-        width: 365px;
-        height: 365px;
+        width: 24.2vw;
+        height: 24.2vw;
+        max-width: 352px;
+        max-height: 352px;
         
         display: flex;
         flex-direction: column;
@@ -86,26 +88,27 @@
 
 .quiet_item1{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 4px;
+    left: 6px;
 }
 .quiet_item2{
     position: absolute;
-    top: 109px;
-    left: 455px;
+    top: 115px;
+    left: 50%;
+    transform:translate(-50%)
 }
 .quiet_item3{
     position: absolute;
-    top: 62px;
-    right: 0px;
+    top: 60px;
+    right: 5px;
 }
 .quiet_item4{
     position: absolute;
-    bottom: 27px;
-    left: 150px;
+    bottom: 35px;
+    left: 155px;
 }
 .quiet_item5{
     position: absolute;
-    bottom: 0px;
-    right: 152px;
+    bottom: 8px;
+    right: 158px;
 }
