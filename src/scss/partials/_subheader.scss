@@ -6,6 +6,19 @@
     height: 40px;
     line-height: 40px;
     background-color: $yellow;
+    z-index: 20;
+
+    &.active{
+        width: 100%;
+        position: fixed;
+    }
+
+    @media (max-width: $tablet_bp) {
+        .sudheader__item_title{
+            font-size: 13px;
+        }
+    	padding: 0 30px;
+	}
     
     .sudheader__item{
         display: flex;

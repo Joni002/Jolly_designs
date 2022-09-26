@@ -5,6 +5,11 @@
 
     background-color: $pink;
     color: #fff;
+
+    @media (max-width: $tablet_bp) {
+        height: 663px;
+    }
+
 }
 .footer_container{
     display: flex;
@@ -78,6 +83,33 @@
             }
         }
     }
+    @media (max-width: $tablet_bp) {
+        padding: 40px 30px 0;
+
+        .footer_content{
+            flex-direction: column;
+
+            .footer_info{
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+            .footer__blocks{
+                width: 100%;
+
+                .footer__block{
+                    width: 216px;
+
+                    .footer_form{
+                        width: 216px;
+                    }
+                }
+                .footer__block_pd{
+                    padding: 0;
+                }
+            }
+        }
+	}
     .footer_bottom{
         display: flex;
         align-items: center;
@@ -108,6 +140,15 @@
         .socials{
             display: flex;
             gap: 24px;
+        }
+        @media (max-width: $tablet_bp) {
+            height: 142px;
+            align-items: flex-start;
+            padding-top: 32px;
+
+            .divider{
+                bottom: 142px;
+            }
         }
     }
 }

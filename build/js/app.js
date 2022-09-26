@@ -24,7 +24,13 @@ $(document).ready(function () {
     infinite: true,
     dots: true,
     prevArrow: "<img src='img/svg/icons/icon-left-big.svg' class='discover_prev' alt='1'>",
-    nextArrow: "<img src='img/svg/icons/icon-right-big.svg' class='discover_next' alt='2'>"
+    nextArrow: "<img src='img/svg/icons/icon-right-big.svg' class='discover_next' alt='2'>",
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false
+      }
+    }]
   });
   $('.bestseller_slider').slick({
     infinite: true,
@@ -32,19 +38,38 @@ $(document).ready(function () {
     slidesToShow: 1,
     centerMode: true,
     arrows: false,
-    variableWidth: true
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false
+      }
+    }]
   });
   $('.favorite_slider').slick({
     infinite: true,
     slidesToShow: 1,
     prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='favorite_prev' alt='1'>",
-    nextArrow: "<img src='img/svg/icons/icon-right-blue.svg' class='favorite_next' alt='2'>"
+    nextArrow: "<img src='img/svg/icons/icon-right-blue.svg' class='favorite_next' alt='2'>",
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false
+      }
+    }]
   });
   $('.meets_slider').slick({
     infinite: true,
     waitForAnimate: false,
     prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_prev' alt='1'>",
-    nextArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_next' alt='2'>"
+    nextArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_next' alt='2'>",
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false
+      }
+    }]
   });
   $('.meets_slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     $('.meets_slider_tab').removeClass('active');
@@ -65,7 +90,14 @@ $(document).ready(function () {
     infinite: false,
     slidesToShow: 6,
     slidesToScroll: 6,
-    arrows: false
+    arrows: false,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }]
   });
   $('.retailer_slider').slick({
     dots: true,
@@ -84,6 +116,12 @@ $(document).ready(function () {
     } else {
       $(this).attr('src', 'img/svg/icons/icon-wish.svg');
     }
+  }); // Burger button
+
+  $('.header__burger').click(function () {
+    console.log('aaa');
+    $('.header__burger,.nav,.main_panel,.sudheader,.bottom_tools').toggleClass('active');
+    $('body').toggleClass('lock');
   });
 });
 //# sourceMappingURL=app.js.map

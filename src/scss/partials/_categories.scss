@@ -4,6 +4,10 @@
     .big_title{
         padding-bottom: 0;
     }
+
+    @media (max-width: $tablet_bp) {
+		display: none;
+	}
 }
 
 .categories .flex_title{
@@ -32,7 +36,6 @@
 
     img{
         width: 296px;
-        height: 296px;
     }
 
     h2{

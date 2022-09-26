@@ -2,15 +2,37 @@
     position: relative;
     width: 100%;
     height: 139px;
-}
 
+    @media (max-width: $tablet_bp) {
+        max-height: 94px;
+	}
+}
+@media (max-width: $tablet_bp) {
+    body.lock{
+        overflow: hidden;
+    }
+}
 .main_panel{
+    position: relative;
+    z-index: 25;
     height: 70px;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 24px 0 0;
+
+    @media (max-width: $tablet_bp) {
+        height: 94px;
+        padding-bottom: 24px;
+    }
+
+    &.active{
+        position: fixed;
+        top: 40px;
+        width: calc(100% - 60px);
+    }
 
     .left_tools{
         display: flex;
@@ -21,6 +43,10 @@
             display: flex;
             align-items: center;
             gap: 6px;
+
+            @media (max-width: $tablet_bp) {
+                display: none;
+            }
         }
         .phone_number:hover{
             color: $darkPink;
@@ -29,6 +55,59 @@
         .language{
             text-transform: uppercase;
             position: relative;
+        }
+
+        .header__burger{
+            display: none;
+        }
+        @media (max-width: $tablet_bp) {
+            gap: 48px;
+
+            .header__burger{
+                display: block;
+                position: relative;
+                width: 24px;
+                height: 24px;
+                padding: 5.8px 5px;
+
+                span{
+                    background-color: $darkGrey;
+                    position: absolute;
+                    top: 11.2px;
+                    width: calc(100% - 10px);
+                    height: 1.4px;
+                    border-radius: 5px;
+                }
+            }
+            .header__burger:before,
+            .header__burger:after{
+                content: '';
+                background-color: $darkGrey;
+                position: absolute;
+                width: calc(100% - 10px);
+                height: 1.4px;
+                border-radius: 5px;
+                transition: all 0.3s ease 0s;
+            }
+            .header__burger.active span{
+                transform: scale(0);
+                transition: all 0.3s ease 0s;
+            }
+            .header__burger:before{
+                top: 5.8px;
+            }
+            .header__burger.active:before{
+                transform: rotate(45deg);
+                top: 11.2px;
+            }
+            .header__burger:after{
+                bottom: 5.8px;
+            }
+            .header__burger.active:after{
+                transform: rotate(-45deg);
+                bottom: 11.2px;
+            }
+
         }
     }
     .logo{
@@ -62,6 +141,44 @@
                 border-radius: 50%;
             }
         }
+
+        @media (max-width: $tablet_bp) {
+            gap: 48px;
+        }
+    }
+    .bottom_tools{
+        position: absolute;
+        padding: 0 120px 0 120px;
+        left: -30px;
+        bottom: -48px;
+        display: none;
+
+        &.active{
+            width: calc(100% + 60px);
+
+            @media (max-width: $tablet_bp) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 48px;
+                background-color: #FFF2F2;
+                border-top: 1px solid #FED9D9;
+                border-bottom: 1px solid #FED9D9;
+            }
+        }
+
+        .bottom_tools_container{
+            width: calc(100% + 60px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .divider{
+                height: 24px;
+                border: 1px solid #FED9D9;
+            }
+        }
     }
 }
 .nav{
@@ -73,26 +190,56 @@
     .nav_item{
         position: relative;
         text-transform: uppercase;
+
+        a{
+            position: relative;
+            &.select:after{
+                position: absolute;
+                content: "";
+                left: calc(100% + 12px);
+                top: calc(50% + 1px);
+                transform: translateY(-50%);
+                border: 5px solid transparent;
+                border-radius: 3px;
+                border-top-color: $pink;
+            }
+        }
     }
     .nav_item a:hover{
         color: $pink;
     }
-    .select:after{
-        position: absolute;
-        content: "";
-        left: calc(100% + 12px);
-        top: calc(50% + 1px);
-        transform: translateY(-50%);
-        border: 5px solid transparent;
-        border-radius: 3px;
-        border-top-color: $pink;
+    
+    &.active{
+        left: 0;
     }
+
+    @media (max-width: $tablet_bp) {
+		position: fixed;
+        gap: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        top: 0;
+        overflow: auto;
+        left: -100%;
+        padding: 200px 30px 0 30px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 15;
+        transition: all 0.3s ease 0s;
+
+        .nav_item{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+        }
+	}
 }
 
 .submenu {
     position: absolute;
     left: 0;
-    top: 100%;
     margin-top: 24px;
     padding: 16px;
 
@@ -100,25 +247,58 @@
     border: 1px solid #E2E2E2;
     white-space: nowrap;
 
-    z-index: 5;
+    z-index: 26;
     visibility: hidden;
     opacity: 0;
     transform: scale(.8);
     transition: .4s ease-in-out;
+
+    @media (max-width: $tablet_bp) {
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        position: static;
+        max-height: 0px;
+        opacity: 1;
+        overflow: hidden;
+        transform: none;
+        transition: all 1s, max-height 1s;
+    }
 }
+.language{
+    @media (max-width: $tablet_bp) {
+        text-transform: uppercase;
+        position: relative;
+    }
+}
+
 .language .submenu{
     margin-top: 3px;
     padding: 8px 16px;
     left: 50%;
     margin-left: -25px;
+
+    @media (max-width: $tablet_bp) {
+        position: absolute;
+        margin-top: 15px;
+    }
 }
 .submenu li{
     text-transform: none;
     padding-bottom: 16px;
+
+    @media (max-width: $tablet_bp) {
+        padding: 24px 0 0 0;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $darkGrey;
+    }
 }
 .language .submenu li{
     text-transform: uppercase;
-    font-weight: 600;
     padding-bottom: 8px;
 }
 .submenu li:last-child{
@@ -129,4 +309,10 @@ li:hover .submenu {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+
+    @media (max-width: $tablet_bp) {
+        max-height: 999px; 
+        transform: none;
+        transition: all 1s, max-height 2s;
+    }
 }

@@ -7,6 +7,10 @@
     .big_title{
         padding-bottom: 0;
     }
+
+    @media (max-width: $tablet_bp) {
+		display: none;
+	}
 }
 
 .retailer_slider{

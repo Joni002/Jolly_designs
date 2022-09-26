@@ -25,6 +25,15 @@
             left: -60px;
             top: -35px;
             transform: rotate(-15deg);
+
+            @media (max-width: $tablet_bp) {
+                width: 55px;
+                height: 50px;
+                left: -30px;
+                top: -15px;
+
+                transform: rotate(0);
+            }
         }
     }
 
@@ -43,6 +52,10 @@
             cursor: pointer;
 	        transition: all 0.2s ease-in-out;
 
+        }
+
+        @media (max-width: $tablet_bp) {
+            padding-bottom: 40px;
         }
     }
     .meets_slider_tab.active{

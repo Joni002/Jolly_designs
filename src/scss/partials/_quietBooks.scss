@@ -6,6 +6,15 @@
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @media (max-width: $tablet_bp) {
+            transform: rotate(90deg);
+            width: 1373.44px;
+            height: 818.63px;
+            right: 158px;
+            top: 213.19px;
+
+        }
     }
 }
 .quiet_books_info{
@@ -22,6 +31,18 @@
             top: -35px;
             right: -60px;
         }
+
+        @media (max-width: $tablet_bp) {
+            padding-bottom: 35px;
+            width: 347px;
+
+            .stripes{
+                width: 51px;
+                height: 50px;
+                top: -10px;
+                right: -30px;
+            }
+        }
     }
     .quiet_books_text{
         width: 625px;
@@ -32,6 +53,18 @@
             line-height: 48px;
             color: $darcBlue;
         }
+
+        @media (max-width: $tablet_bp) {
+            position: absolute;
+            width: 370px;
+            top: 175px;
+            right: 0;
+
+            h2{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
     }
 }
 
@@ -40,8 +73,8 @@
     height: 793px;
 
     .quiet_books_items{
-        width: 24.2vw;
-        height: 24.2vw;
+        width: calc($ds * 18);
+        height: calc($ds * 18);
         max-width: 352px;
         max-height: 352px;
         
@@ -57,6 +90,10 @@
         
         border-radius: 50%;
         
+        @media (max-width: $tablet_bp) {
+            width: 310px;
+            height: 310px;
+        }
 
         h3{
             font-weight: 600;
@@ -69,8 +106,17 @@
             font-size: 16px;
             line-height: 24px;
             text-align: center;
+
+            @media (max-width: $tablet_bp) {
+                font-size: 14px;
+                line-height: 21px;
+            }
         }
     }
+    @media (max-width: $tablet_bp) {
+        height: 1085px;
+    }
+
     // Костиль ;(
         .quiet_books_items:after{
             content: '';
@@ -88,27 +134,55 @@
 
 .quiet_item1{
     position: absolute;
-    top: 4px;
-    left: 6px;
+    top: calc($ds / 3);
+    left: calc($ds / 3);
 }
 .quiet_item2{
     position: absolute;
-    top: 115px;
+    top: calc($ds * 5.2);
     left: 50%;
     transform:translate(-50%)
 }
 .quiet_item3{
     position: absolute;
-    top: 60px;
-    right: 5px;
+    top: calc($ds * 2.6);
+    right: calc($ds / 3.8);
 }
 .quiet_item4{
     position: absolute;
-    bottom: 35px;
-    left: 155px;
+    bottom: calc($ds * 1.5);
+    left: calc($ds * 7);
 }
 .quiet_item5{
     position: absolute;
-    bottom: 8px;
-    right: 158px;
+    bottom: calc($ds / 3);
+    right: calc($ds * 7);
+}
+
+@media (max-width: $tablet_bp) {
+    .quiet_item1{
+        top: 0px;
+        left: 0;
+    }
+    .quiet_item2{
+        top: 179px;
+        right: 0;
+        left: auto;
+        transform: none;
+    }
+    .quiet_item3{
+        top: 395px;
+        left: 0;
+        right: auto;
+    }
+    .quiet_item4{
+        top: 580px;
+        right: 0;
+        left: auto;
+    }
+    .quiet_item5{
+        top: 780px;
+        right: auto;
+        left: 0;
+    }
 }
