@@ -106,7 +106,8 @@
                     .footer_form{
                         width: 216px;
                         @media (max-width: $mobile_bp) {
-                            width: 290px;
+                            width: 100vw;
+                            padding-right: 30px;
                         }
                     }
                 }
@@ -166,6 +167,7 @@
         @media (max-width: $mobile_bp) {
             flex-direction: column-reverse;
             justify-content: start;
+            align-items: center;
             height: 171px;
             padding-top: 24px;
             gap: 24px;

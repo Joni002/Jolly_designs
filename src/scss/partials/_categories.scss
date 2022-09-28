@@ -6,8 +6,12 @@
     }
 
     @media (max-width: $tablet_bp) {
-		// display: none;
-        .content_container{
+		display: none;
+	}
+    @media (max-width: $mobile_bp) {
+		display: block;
+
+		.content_container{
             padding: 8px 15px;
         }
 	}
