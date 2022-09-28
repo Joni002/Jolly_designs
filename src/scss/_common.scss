@@ -21,6 +21,7 @@ $darcBlue: #105393;
 $orange: #F2994A;
 
 $tablet_bp: 1199px;
+$mobile_bp: 767px;
 
 html,
 body {
@@ -106,9 +107,14 @@ button {
     margin: 0 auto;
 
 	@media (max-width: $tablet_bp) {
-		max-width: 1999px;
+		max-width: 1199px;
     	padding: 0 30px;
 	}
+
+	@media (max-width: $mobile_bp) {
+        max-width: 767px;
+    	padding: 0 15px;
+    }
 }
 
 .content_container{
@@ -120,6 +126,11 @@ button {
 		max-width: 1999px;
     	padding: 80px 30px;
 	}
+
+	@media (max-width: $mobile_bp) {
+        max-width: 767px;
+    	padding: 80px 15px;
+    }
 }
 
 .color-white{
@@ -158,6 +169,11 @@ button {
 	line-height: 24px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
+
+	@media (max-width: $mobile_bp) {
+		text-align: center;
+		padding: 12px 24px;
+    }
 }
 .pink_button:hover{
 	background-color: $darkPink;
@@ -196,6 +212,11 @@ button {
 	line-height: 24px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
+
+	@media (max-width: $mobile_bp) {
+		text-align: center;
+		padding: 12px 28px;
+    }
 }
 .yellow_button:hover{
 	background-color: #FFDCA7;
@@ -213,8 +234,12 @@ button {
 		font-size: 48px;
 		padding-bottom: 16px;
 		line-height: 66px;
-
 	}
+	@media (max-width: $mobile_bp) {
+		font-size: 32px;
+		line-height: 40px;
+		padding-bottom: 24px;
+    }
 }
 
 .flex_title{
@@ -259,6 +284,9 @@ button {
 	}
 }
 
+.tablet_true{
+	display: none;
+}
 
 @media (max-width: $tablet_bp) {
 	.tablet_none{
@@ -268,6 +296,4 @@ button {
 		display: block;
 	}
 }
-.tablet_true{
-	display: none;
-}
+

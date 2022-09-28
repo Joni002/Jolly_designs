@@ -16,6 +16,11 @@
 
         }
     }
+    @media (max-width: $mobile_bp) {
+        .content_container{
+            padding-bottom: 40px;
+        }
+    }
 }
 .quiet_books_info{
     display: flex;
@@ -66,6 +71,34 @@
             }
         }
     }
+    @media (max-width: $mobile_bp) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        .quiet_books_title{
+            padding: 0;
+            width: 290px;
+
+            .big_title{
+                padding: 0;
+            }
+
+            .stripes{
+                top: -20px;
+                right: 0px;
+            }
+        }
+        .quiet_books_text{
+            position: static;
+            width: 290px;
+
+            h2{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+    }
 }
 
 .quiet_books_content{
@@ -94,6 +127,11 @@
             width: 310px;
             height: 310px;
         }
+        @media (max-width: $mobile_bp) {
+            position: relative;
+            width: 296px;
+            height: 296px;
+        }
 
         h3{
             font-weight: 600;
@@ -115,6 +153,10 @@
     }
     @media (max-width: $tablet_bp) {
         height: 1085px;
+    }
+    @media (max-width: $mobile_bp) {
+        padding-top: 48px;
+        height: 448px;
     }
 
     // Костиль ;(
@@ -185,4 +227,18 @@
         right: auto;
         left: 0;
     }
+}
+@media (max-width: $mobile_bp) {
+    .quiet_item1,.quiet_item2,.quiet_item3,.quiet_item4,.quiet_item5{
+        left: auto;
+        top: auto;
+    }
+}
+
+.quiet_books_content .slick-slide.slick-active{
+    z-index: 10;
+}
+.quiet_books_content .slick-dots li.slick-active button{
+    opacity: 1;
+    background: $darcBlue;
 }

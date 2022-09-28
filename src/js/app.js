@@ -48,7 +48,8 @@ $( document ).ready(
 			centerMode: true,
 			arrows: false,
 
-			variableWidth: true, responsive:[
+			variableWidth: true, 
+			responsive:[
 				{
 					breakpoint: 1200,
 					settings: {
@@ -60,7 +61,7 @@ $( document ).ready(
 
 		$('.favorite_slider').slick({
 			infinite: true,
-			slidesToShow: 1,
+			slidesToShow: 2,
 			prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='favorite_prev' alt='1'>",
     		nextArrow: "<img src='img/svg/icons/icon-right-blue.svg' class='favorite_next' alt='2'>",
 			
@@ -70,12 +71,22 @@ $( document ).ready(
 					settings: {
 						arrows: false,
 					}
-			}]
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1.03,
+						prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='favorite_prev' alt='1'>",
+    					nextArrow: "<img src='img/svg/icons/icon-right-mobile.svg' class='favorite_next' alt='2'>",
+					}
+				}
+			]
 		});
 
 		$('.meets_slider').slick({
 			infinite: true,
 			waitForAnimate: false,
+			slidesToShow: 1,
 			prevArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_prev' alt='1'>",
     		nextArrow: "<img src='img/svg/icons/icon-left-yellow.svg' class='meets_next' alt='2'>",
 		
@@ -102,8 +113,18 @@ $( document ).ready(
 
 		$('.categories_slider').slick({
 			infinite: false,
+			waitForAnimate: false,
 			slidesToShow: 4,
 			arrows: false,
+			responsive:[
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 4,
+						variableWidth: true,
+					}
+				}
+			]
 		})
 
 		$('.follow_slider').slick({
@@ -119,7 +140,15 @@ $( document ).ready(
 						slidesToShow: 3,
 						slidesToScroll: 3,
 					}
-			}]
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}
+				}
+			]
 		})
 
 		$('.retailer_slider').slick({
@@ -131,6 +160,26 @@ $( document ).ready(
 			speed: 1000,
 			autoplay: true,
   			autoplaySpeed: 4000,
+		})
+
+		$('.quiet_books_content').slick({
+			arrows: false,
+			responsive:[
+				{
+					breakpoint: 2000,
+					settings: 'unslick'
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						infinite: true,
+						dots: true,
+						slidesToShow: 1,
+						centerMode: true,
+						variableWidth: true,
+					}
+				}
+			]
 		})
 
 		// Like button

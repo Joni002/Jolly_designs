@@ -1,38 +1,65 @@
 .made_books{
     position: relative;
     .content_container{
-        padding-bottom: 0;
+        padding-bottom: 70px;
+
+        @media (max-width: $tablet_bp) {
+            height: 832px;
+            padding-bottom: 0;
+        }
+        @media (max-width: $mobile_bp) {
+            height: 910px;
+        }
     }
 }
 .made_books_title{
     text-align: center;
 }
 .made_books_content{
-    padding-top: 20px;
+    position: relative;
+    margin-top: 34px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     img{
-        padding-top: -5px;
+        position: absolute; 
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);  
         @media (max-width: $tablet_bp) {
-            position: absolute;
-            top: 314px;
-            left: 50%;
-            transform: translate(-50%);
             width: 448px;
             height: 390px;
+
+            top: 125px;
+        }
+        @media (max-width: $mobile_bp) {
+            min-width: 320px;
+            height: 279px;
+
+            top: 220px;
         }
     }
+    @media (max-width: $tablet_bp) {
+        height: 646px;
+        margin-top: 28px;
+    }
+    @media (max-width: $mobile_bp) {
+        height: 750px;
+        margin-top: 0;
+    }
+    
 }
 .made_books__steps{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 28px;
+    justify-content: space-between;
+    padding-top: 40px;
 
     @media (max-width: $tablet_bp) {
         padding: 0;
-        gap: 480px;
+    }
+    @media (max-width: $mobile_bp) {
+        flex-direction: column;
     }
 }
 .made_books__step{
@@ -47,12 +74,7 @@
         line-height: 30px;
         font-weight: 600;
 
-        padding-top: 12px;
         padding-bottom: 10px;
-
-        @media (max-width: $tablet_bp) {
-            padding-top: 5px;
-        }
     }
     .made_books__step_text{
         width: 220px;
@@ -60,12 +82,13 @@
         line-height: 24px;
         text-align: center;
 
-        padding-bottom: 32px;
-
         @media (max-width: $tablet_bp) {
             font-size: 14px;
             line-height: 21px;
             padding-bottom: 0;
+        }
+        @media (max-width: $mobile_bp) {
+            padding-bottom: 24px;
         }
     }
 
@@ -75,5 +98,9 @@
         .made_books__step_text{
             width: 340px;
         }
+    }
+    @media (max-width: $mobile_bp) {
+        width: 290px;
+
     }
 }

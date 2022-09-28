@@ -6,7 +6,10 @@
     }
 
     @media (max-width: $tablet_bp) {
-		display: none;
+		// display: none;
+        .content_container{
+            padding: 8px 15px;
+        }
 	}
 }
 
@@ -14,6 +17,9 @@
     display: flex;
     justify-content: center;
     padding-bottom: 0;
+    @media (max-width: $mobile_bp) {
+		display: none;
+	}
 }
 .categories_title{
     position: relative;
@@ -44,4 +50,16 @@
         font-size: 32px;
         line-height: 48px;
     }
+    @media (max-width: $mobile_bp) {
+        padding-right: 8px;
+        gap: 2px;
+		h2{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        img{
+            width: 56px;
+        }
+	}
 }

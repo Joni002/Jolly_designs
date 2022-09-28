@@ -6,6 +6,9 @@
     @media (max-width: $tablet_bp) {
         max-height: 94px;
 	}
+    @media (max-width: $mobile_bp) {
+        max-height: 58px;
+	}
 }
 @media (max-width: $tablet_bp) {
     body.lock{
@@ -21,17 +24,26 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 24px 0 0;
+    padding-top: 24px;
 
     @media (max-width: $tablet_bp) {
         height: 94px;
         padding-bottom: 24px;
+    }
+    @media (max-width: $mobile_bp) {
+        padding: 16px 0;
+        height: 58px;
     }
 
     &.active{
         position: fixed;
         top: 40px;
         width: calc(100% - 60px);
+
+        @media (max-width: $mobile_bp) {
+            width: calc(100% - 30px);
+            top: 32px;
+        }
     }
 
     .left_tools{
@@ -60,15 +72,18 @@
         .header__burger{
             display: none;
         }
-        @media (max-width: $tablet_bp) {
-            gap: 48px;
+        
 
             .header__burger{
-                display: block;
+                display: none;
                 position: relative;
                 width: 24px;
                 height: 24px;
                 padding: 5.8px 5px;
+
+                &.active{
+                    padding: 0;
+                }
 
                 span{
                     background-color: $darkGrey;
@@ -77,6 +92,17 @@
                     width: calc(100% - 10px);
                     height: 1.4px;
                     border-radius: 5px;
+                }
+
+                @media (max-width: $mobile_bp) {
+                    width: 24px;
+                    height: 20px;
+                    padding: 4.8px 5px;
+
+                    span{
+                        top: 9px;
+                        margin-top: 0.2px;
+                    }
                 }
             }
             .header__burger:before,
@@ -98,30 +124,51 @@
             }
             .header__burger.active:before{
                 transform: rotate(45deg);
+                width: 100%;
                 top: 11.2px;
+                @media (max-width: $mobile_bp) {
+                    top: 10px;
+                }
             }
             .header__burger:after{
                 bottom: 5.8px;
             }
             .header__burger.active:after{
                 transform: rotate(-45deg);
+                width: 100%;
                 bottom: 11.2px;
+                @media (max-width: $mobile_bp) {
+                    bottom: 9px;
+                }
             }
 
+        @media (max-width: $tablet_bp) {
+            gap: 48px;
+
+            .header__burger{
+                display: block;
+            }
+        }
+        @media (max-width: $mobile_bp) {
+            gap: 25px;
         }
     }
     .logo{
         position: absolute;
         top: 24px;
         left: calc(50% - 90px);
+
+        @media (max-width: $mobile_bp) {
+            height: 26px;
+            top: 16px;
+            left: calc(50% - 50px);
+        }
     }
     .right_tools{
         display: flex;
         gap: 40px;
 
-        .icon_hover:hover{
-            filter: invert(80%) sepia(72%) saturate(2267%) hue-rotate(304deg) brightness(101%) contrast(116%);
-        }
+        
         .like{
             display: flex;
             align-items: center;
@@ -140,15 +187,33 @@
                 color: $colorWhite;
                 border-radius: 50%;
             }
+            @media (max-width: $mobile_bp) {
+                gap: 0;
+
+                .counter{
+                    padding: 0;
+                    width: 16px;
+                    height: 16px;
+
+                    font-size: 10px;
+                }
+            }
         }
 
         @media (max-width: $tablet_bp) {
             gap: 48px;
         }
+        @media (max-width: $mobile_bp) {
+            gap: 8px;
+
+            .counter{
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
     .bottom_tools{
         position: absolute;
-        padding: 0 120px 0 120px;
         left: -30px;
         bottom: -48px;
         display: none;
@@ -165,6 +230,9 @@
                 border-top: 1px solid #FED9D9;
                 border-bottom: 1px solid #FED9D9;
             }
+            @media (max-width: $mobile_bp) {
+                width: calc(100% + 50px);
+            }
         }
 
         .bottom_tools_container{
@@ -172,11 +240,11 @@
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
 
             .divider{
                 height: 24px;
-                border: 1px solid #FED9D9;
+                border-right: 1px solid #FED9D9;
             }
         }
     }
@@ -193,6 +261,7 @@
 
         a{
             position: relative;
+            color: $darkGrey;
             &.select:after{
                 position: absolute;
                 content: "";
@@ -235,6 +304,16 @@
             line-height: 27px;
         }
 	}
+    @media (max-width: $tablet_bp) {
+        padding: 162px 20px 0 20px;
+        gap: 24px;
+
+        .nav_item{
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+
 }
 
 .submenu {
@@ -265,12 +344,25 @@
         transform: none;
         transition: all 1s, max-height 1s;
     }
+    @media (max-width: $mobile_bp) {
+        padding-left: 8px;
+    }
+
 }
 .language{
     @media (max-width: $tablet_bp) {
         text-transform: uppercase;
         position: relative;
     }
+}
+
+.icon_hover{
+    @media (max-width: $mobile_bp) {
+        height: 20px;
+    }
+}
+.icon_hover:hover{
+    filter: invert(80%) sepia(72%) saturate(2267%) hue-rotate(304deg) brightness(101%) contrast(116%);
 }
 
 .language .submenu{
@@ -289,17 +381,20 @@
     padding-bottom: 16px;
 
     @media (max-width: $tablet_bp) {
-        padding: 24px 0 0 0;
+        padding-top: 24px 0 0 0;
 
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        color: $darkGrey;
     }
 }
 .language .submenu li{
     text-transform: uppercase;
     padding-bottom: 8px;
+    
+    a{
+        color: $darkGrey;
+    }
 }
 .submenu li:last-child{
     padding-bottom: 0;
@@ -311,8 +406,13 @@ li:hover .submenu {
     transform: scale(1);
 
     @media (max-width: $tablet_bp) {
+        margin-top: 24px;
+
         max-height: 999px; 
         transform: none;
         transition: all 1s, max-height 2s;
+    }
+    @media (max-width: $tablet_bp) {
+        margin-top: 16px;
     }
 }

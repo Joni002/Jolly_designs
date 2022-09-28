@@ -19,6 +19,13 @@
         }
     	padding: 0 30px;
 	}
+    @media (max-width: $mobile_bp) {
+        height: 32px;
+    	padding: 0 15px;
+        .sudheader__item_title{
+            line-height: 15px;
+        }
+	}
     
     .sudheader__item{
         display: flex;

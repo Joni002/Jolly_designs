@@ -11,6 +11,9 @@
     @media (max-width: $tablet_bp) {
         margin-top: 35px;
     }
+    @media (max-width: $mobile_bp) {
+        margin-top: 25px;
+    }
 }
 .bestseller_slider_item_card{
     position: relative;
@@ -52,6 +55,10 @@
     .pink_button_outline{
         margin-top: 16px;
         margin-bottom: 63px;
+
+        @media (max-width: $mobile_bp) {
+            margin-bottom: 44px;
+        }
     }
 
 	@media (max-width: $tablet_bp) {
