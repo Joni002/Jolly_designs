@@ -1,5 +1,6 @@
 .quiet_books{
     background-color: $blue;
+    overflow: hidden;
     position: relative;
 
     .quiet_books_line{
@@ -13,8 +14,14 @@
             height: 818.63px;
             right: 158px;
             top: 213.19px;
-
         }
+        @media (max-width: $mobile_bp) {
+            transform: rotate(0);
+            top: 0;
+            right: 0;
+            object-fit: cover;
+        }
+
     }
     @media (max-width: $mobile_bp) {
         .content_container{
@@ -176,29 +183,29 @@
 
 .quiet_item1{
     position: absolute;
-    top: calc($ds / 3);
-    left: calc($ds / 3);
+    top: 0;
+    left: 0;
 }
 .quiet_item2{
     position: absolute;
-    top: calc($ds * 5.2);
+    top: 109px;
     left: 50%;
     transform:translate(-50%)
 }
 .quiet_item3{
     position: absolute;
-    top: calc($ds * 2.6);
-    right: calc($ds / 3.8);
+    top: 54px;
+    right: 0;
 }
 .quiet_item4{
     position: absolute;
-    bottom: calc($ds * 1.5);
-    left: calc($ds * 7);
+    bottom: 27px;
+    left: 150px;
 }
 .quiet_item5{
     position: absolute;
-    bottom: calc($ds / 3);
-    right: calc($ds * 7);
+    bottom: 0;
+    right: 152px;
 }
 
 @media (max-width: $tablet_bp) {
