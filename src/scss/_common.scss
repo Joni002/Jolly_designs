@@ -27,7 +27,9 @@ html,
 body {
 	height: 100%;
 }
-
+body.lock{
+	overflow: hidden;
+}
 body {
 	color: $darkGrey;
 	font-size: 14px;
@@ -164,6 +166,7 @@ button {
 	border-radius: 38px;
 
 	color: $colorWhite;
+	cursor: pointer;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;
@@ -188,6 +191,7 @@ button {
 	border-radius: 38px;
 
 	color: $pink;
+	cursor: pointer;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;
@@ -207,6 +211,7 @@ button {
 	border-radius: 38px;
 
 	color: $darkPink;
+	cursor: pointer;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;

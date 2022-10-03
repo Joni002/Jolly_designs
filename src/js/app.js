@@ -194,9 +194,23 @@ $( document ).ready(
 
 		// Burger button
 		$('.header__burger').click(function() {
-			console.log('aaa')
 			$('.header__burger,.nav,.main_panel,.sudheader,.bottom_tools').toggleClass('active')
 			$('body').toggleClass('lock')
+		})
+
+		// Open modal button
+		$('.discover_buttons .pink_button').click(function() {
+			$('.order__modal').addClass('modal_active')
+			$('body').addClass('lock')
+		})
+
+		// Close modal
+		$('.order__modal_content').click(function(event){
+			event.stopPropagation()
+		})
+		$('.order__modal, .order__modal_close').click(function() {
+			$('.order__modal').removeClass('modal_active')
+			$('body').removeClass('lock')
 		})
 	}
 );

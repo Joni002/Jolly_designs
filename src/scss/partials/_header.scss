@@ -10,11 +10,6 @@
         max-height: 58px;
 	}
 }
-@media (max-width: $tablet_bp) {
-    body.lock{
-        overflow: hidden;
-    }
-}
 .main_panel{
     position: relative;
     z-index: 25;
